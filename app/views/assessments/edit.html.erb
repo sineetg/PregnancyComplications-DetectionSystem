@@ -1,0 +1,12 @@
+<% content_for :title, "Editing assessment" %>
+
+<h1>Editing assessment</h1>
+
+<%= render "form", assessment: @assessment %>
+
+<br>
+
+<div>
+  <%= link_to "Show this assessment", @assessment %> |
+  <%= link_to "Back to assessments", assessments_path %>
+</div>

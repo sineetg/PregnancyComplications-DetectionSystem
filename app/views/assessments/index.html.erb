@@ -1,0 +1,16 @@
+<p style="color: green"><%= notice %></p>
+
+<% content_for :title, "Assessments" %>
+
+<h1>Assessments</h1>
+
+<div id="assessments">
+  <% @assessments.each do |assessment| %>
+    <%= render assessment %>
+    <p>
+      <%= link_to "Show this assessment", assessment %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New assessment", new_assessment_path %>

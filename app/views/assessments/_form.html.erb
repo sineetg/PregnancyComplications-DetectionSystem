@@ -1,0 +1,52 @@
+<%= form_with(model: assessment) do |form| %>
+  <% if assessment.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(assessment.errors.count, "error") %> prohibited this assessment from being saved:</h2>
+
+      <ul>
+        <% assessment.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :patient_id, style: "display: block" %>
+    <%= form.text_field :patient_id %>
+  </div>
+
+  <div>
+    <%= form.label :edema, style: "display: block" %>
+    <%= form.checkbox :edema %>
+  </div>
+
+  <div>
+    <%= form.label :labor_duration, style: "display: block" %>
+    <%= form.number_field :labor_duration %>
+  </div>
+
+  <div>
+    <%= form.label :contraction_pattern, style: "display: block" %>
+    <%= form.text_field :contraction_pattern %>
+  </div>
+
+  <div>
+    <%= form.label :cervical_dilation, style: "display: block" %>
+    <%= form.text_field :cervical_dilation %>
+  </div>
+
+  <div>
+    <%= form.label :uterine_tone, style: "display: block" %>
+    <%= form.text_field :uterine_tone %>
+  </div>
+
+  <div>
+    <%= form.label :fetal_head_position, style: "display: block" %>
+    <%= form.text_field :fetal_head_position %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

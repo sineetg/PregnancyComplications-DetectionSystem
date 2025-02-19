@@ -1,0 +1,11 @@
+<% content_for :title, "New assessment" %>
+
+<h1>New assessment</h1>
+
+<%= render "form", assessment: @assessment %>
+
+<br>
+
+<div>
+  <%= link_to "Back to assessments", assessments_path %>
+</div>
